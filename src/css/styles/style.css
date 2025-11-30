@@ -16714,3 +16714,15 @@ img {
 .no-cursor {
   cursor: not-allowed;
 }
+
+
+.author_list_info a {
+  text-decoration: none !important;
+  color: #000;   /* keep text color same as design */
+  font-weight: 600;
+}
+
+.author_list_info a:hover {
+  text-decoration: underline; /* optional */
+  color: #8b5cf6; /* light purple hover like the template */
+}
