@@ -544,6 +544,58 @@ header .header-col.mid .social-icons {
 
 /* ================================================== */
 
+/* BLACK arrow icons */
+.slick-prev:before,
+.slick-next:before {
+  color: #000 !important;        /* 🔥 pure black arrow icon */
+  font-size: 18px !important;    /* smaller size */
+  opacity: 1 !important;
+}
+
+/* White circular arrow buttons */
+.slick-prev,
+.slick-next {
+  width: 34px;                   /* button size */
+  height: 34px;
+  z-index: 15;
+}
+
+/* Position arrows outside slider */
+.slick-prev {
+  left: -20px;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+/* Circle + matching border */
+.slick-prev:before,
+.slick-next:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  background: #fff;               /* white circle */
+  border-radius: 50%;  
+  border: 1px solid #e5e7eb;      /* identical border to NFT squares */
+}
+
+/* Hover effect */
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  background: #f3f3f3;
+  border-color: #d1d5db;         /* slightly darker on hover */
+}
+
+
+
+
+
+
 #mainmenu {
   font-family: var(--title-font);
   font-weight: 600;
