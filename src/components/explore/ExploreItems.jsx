@@ -155,7 +155,7 @@ const ExploreItems = () => {
           </div>
         ))}
 
-        {/* LOAD MORE BUTTON */}
+        
         {visibleCount < items.length && (
           <div className="col-md-12 text-center">
             <button

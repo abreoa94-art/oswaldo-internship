@@ -16714,3 +16714,64 @@ img {
 .no-cursor {
   cursor: not-allowed;
 }
+
+
+/* Skeleton wrapper grid spacing */
+.skeleton-card {
+  background: #eee;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: skeleton-loading 1.5s infinite linear;
+}
+
+/* Skeleton image placeholder */
+.skeleton-img {
+  width: 100%;
+  height: 220px;
+  background: #ddd;
+  border-radius: 12px;
+}
+
+/* Skeleton title */
+.skeleton-title {
+  width: 60%;
+  height: 18px;
+  background: #ddd;
+  border-radius: 6px;
+}
+
+/* Skeleton author line */
+.skeleton-author {
+  width: 40%;
+  height: 14px;
+  background: #ddd;
+  border-radius: 6px;
+}
+
+/* Smooth shimmer animation */
+@keyframes skeleton-loading {
+  0% {
+    background-color: #eeeeee;
+  }
+  50% {
+    background-color: #dddddd;
+  }
+  100% {
+    background-color: #eeeeee;
+  }
+}
+
+/* FOR TOP SELLERS ROW SKELETONS */
+.skeleton-author-row {
+  width: 100%;
+  height: 65px;
+  background: #eee;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  animation: skeleton-loading 1.5s infinite linear;
+}
