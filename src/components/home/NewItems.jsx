@@ -100,7 +100,6 @@ const NewItems = () => {
           ) : (
             <Slider {...settings}>
               {items.map((item, index) => {
-                console.log('ITEM', item)
                 return (
                   <div key={item.id}>
                     <div className="nft__item">
