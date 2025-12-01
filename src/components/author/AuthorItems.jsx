@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import nftImage from "../../images/nftImage.jpg";
+
 
 const AuthorItems = ({items = []}) => {
 
@@ -75,7 +74,7 @@ const AuthorItems = ({items = []}) => {
             </div>
           ))}
           {items.length === 0 && (
-            <div className="col-md-12 text-center mt-4">
+            <div className="col-md-12 text-center mt-5 mb-5">
               <h5>No NFTs found for this author.</h5>
             </div>
           )}
