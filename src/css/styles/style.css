@@ -878,6 +878,8 @@ header:not(.header-mobile) #mainmenu > li:hover ul.mega {
   color: white;
 }
 
+
+
 @media (max-width: 991px) {
   #mainmenu {
     display: none;
@@ -895,6 +897,122 @@ header:not(.header-mobile) #mainmenu > li:hover ul.mega {
     display: none;
   }
 }
+
+.slick-slide > div{
+  padding: 0 15px;
+}
+
+.slick-list {
+  margin: 0 -15px;
+}
+
+/* Reset default slick arrows */
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important; /* remove default arrow */
+}
+
+/* Outer circular button */
+.slick-prev,
+.slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  background: #ffffff !important; /* white background */
+  border-radius: 50% !important; /* make circle */
+  border: 2px solid #e5e5e5 !important; /* match NFT card border */
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 20 !important;
+  cursor: pointer;
+}
+
+/* Position arrows */
+.slick-prev {
+  left: -10px !important;
+}
+
+.slick-next {
+  right: -10px !important;
+}
+
+/* Custom inner arrow */
+.slick-prev:after,
+.slick-next:after {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Left arrow */
+.slick-prev:after {
+  content: "‹";
+}
+
+/* Right arrow */
+.slick-next:after {
+  content: "›";
+}
+
+
+/* Skeleton shimmer animation */
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e3e3e3;
+  }
+  100% {
+    background-color: #d1d1d1;
+  }
+}
+
+/* Wrapper for skeleton cards */
+.skeleton-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+/* Each skeleton placeholder card */
+.skeleton-card {
+  width: 100%;
+  max-width: 240px;
+}
+
+/* Main NFT image placeholder */
+.skeleton-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  animation: skeleton-loading 1.2s linear infinite alternate;
+  margin-bottom: 15px;
+}
+
+/* Circular author image placeholder */
+.skeleton-author {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: skeleton-loading 1.2s linear infinite alternate;
+  margin-bottom: 15px;
+}
+
+/* Title placeholder */
+.skeleton-title {
+  width: 70%;
+  height: 18px;
+  border-radius: 8px;
+  animation: skeleton-loading 1.2s linear infinite alternate;
+  margin-bottom: 10px;
+}
+
+/* Code placeholder */
+.skeleton-code {
+  width: 40%;
+  height: 16px;
+  border-radius: 8px;
+  animation: skeleton-loading 1.2s linear infinite alternate;
+}
+
+
 
 /* menu toggle for mobile */
 
