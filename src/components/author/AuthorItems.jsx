@@ -3,19 +3,37 @@ import { Link } from "react-router-dom";
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 
-const AuthorItems = () => {
+const AuthorItems = ({items = []}) => {
+
+  const getRemainingTime = (expiryDate) => {
+    const now = Date.now()
+    const timeLeft  = expiryDate - now 
+
+    if(timeLeft < 0) return "00h : 00m : 00s"
+
+    const hours = Math.floor(timeLeft / (1000 * 60 * 60))
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) /( 1000 * 60))
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000)
+
+    return `${hours}h : ${minutes}m : ${seconds}s`
+  }
+
+
   return (
     <div className="de_tab_content">
       <div className="tab-1">
         <div className="row">
-          {new Array(8).fill(0).map((_, index) => (
-            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={index}>
+          {items.map((item) => (
+            <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={item.id}>
               <div className="nft__item">
                 <div className="author_list_pp">
-                  <Link to="">
-                    <img className="lazy" src={AuthorImage} alt="" />
+                  <Link to={`/author/${item.authorId}`}>
+                    <img className="lazy" src={item.authorImage} alt={item.authorName} />
                     <i className="fa fa-check"></i>
                   </Link>
+                </div>
+                <div className="de_countdown">
+                  {getRemainingTime(item.expiryDate)}
                 </div>
                 <div className="nft__item_wrap">
                   <div className="nft__item_extra">
@@ -35,27 +53,32 @@ const AuthorItems = () => {
                       </div>
                     </div>
                   </div>
-                  <Link to="/item-details">
+                  <Link to={`/item-details/${item.id}`}>
                     <img
-                      src={nftImage}
+                      src={item.nftImage}
                       className="lazy nft__item_preview"
-                      alt=""
+                      alt={item.title}
                     />
                   </Link>
                 </div>
                 <div className="nft__item_info">
-                  <Link to="/item-details">
-                    <h4>Pinky Ocean</h4>
+                  <Link to={`/item-details/${item.id}`}>
+                    <h4>{item.title}</h4>
                   </Link>
-                  <div className="nft__item_price">2.52 ETH</div>
+                  <div className="nft__item_price">{item.price} ETH</div>
                   <div className="nft__item_like">
                     <i className="fa fa-heart"></i>
-                    <span>97</span>
+                    <span>{item.likes}</span>
                   </div>
                 </div>
               </div>
             </div>
           ))}
+          {items.length === 0 && (
+            <div className="col-md-12 text-center mt-4">
+              <h5>No NFTs found for this author.</h5>
+            </div>
+          )}
         </div>
       </div>
     </div>
