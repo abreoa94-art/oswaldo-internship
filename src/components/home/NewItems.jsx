@@ -106,8 +106,7 @@ const NewItems = () => {
                       <div className="author_list_pp">
                         <Link
                           to={`/author/${item.authorId || item.id}`}
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
+                          
                           title={`Creator: User #${item.authorId}`}
                           >
                           <img className="lazy" src={item.authorImage} alt={item.author} />

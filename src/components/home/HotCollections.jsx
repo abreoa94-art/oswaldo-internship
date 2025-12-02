@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import nftImage from "../../images/nftImage.jpg";
+import SkeletonCard from "../skeletons/SkeletonCard";
+
 
 const HotCollections = () => {
 
@@ -94,7 +94,7 @@ const settings = {
                   </Link>
                 </div>
                 <div className="nft_coll_pp">
-                  <Link to="/author">
+                  <Link to={`/author/${item.authorId}`}>
                     <img className="lazy pp-coll" src={item.authorImage} alt="" />
                   </Link>
                   <i className="fa fa-check"></i>

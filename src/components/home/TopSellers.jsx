@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import axios from "axios"
+import SkeletonSellerRow from "../skeletons/skeletonSellerRow";
 
 const TopSellers = () => {
   const [sellers, setSellers] = useState([]);
@@ -41,17 +42,14 @@ const TopSellers = () => {
               {loading ? (
                 <>
                   {new Array(12).fill(0).map((_, i) => (
-                    <li
-                      key={i}
-                      className="skeleton-card skeleton-author-row"
-                    ></li>
+                    <SkeletonSellerRow key={i} />
                   ))}
                 </>
               ) : (
                 sellers.map((seller) => (
                   <li key={seller.id}>
                     <div className="author_list_pp">
-                      <Link to={`/author/${seller.id}`}>
+                      <Link to={`/author/${seller.authorId}`}>
                         <img
                           className="lazy pp-author"
                           src={seller.authorImage}
@@ -63,7 +61,7 @@ const TopSellers = () => {
 
                     <div className="author_list_info">
                       <h5>
-                        <Link to={`/author/${seller.id}`}>{seller.authorName}</Link>
+                        <Link to={`/author/${seller.authorId}`}>{seller.authorName}</Link>
                       </h5>
                       <span>{seller.price} ETH</span>
                     </div>
