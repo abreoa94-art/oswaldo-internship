@@ -16886,72 +16886,203 @@ img {
 }
 
 
-/* Skeleton wrapper grid spacing */
-.skeleton-card {
-  background: #eee;
-  border-radius: 12px;
-  padding: 16px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  animation: skeleton-loading 1.5s infinite linear;
+/* Shared skeleton settings */
+.skeleton-card,
+.skeleton-banner,
+.skeleton-avatar,
+.skeleton-line,
+.skeleton-follow {
+  background: #e3e3e3;
+  border-radius: 8px;
+  animation: pulse 1.4s infinite ease-in-out;
 }
 
-/* Skeleton image placeholder */
+@keyframes pulse {
+  0% { opacity: .6; }
+  50% { opacity: 1; }
+  100% { opacity: .6; }
+}
+
+/* Author banner */
+.skeleton-banner {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 20px;
+}
+
+/* Profile skeleton area */
+.skeleton-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.skeleton-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Lines under name */
+.skeleton-lines {
+  flex: 1;
+}
+
+.skeleton-line {
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.skeleton-line.w-50 { width: 50%; }
+.skeleton-line.w-25 { width: 25%; }
+.skeleton-line.w-75 { width: 75%; }
+
+/* Follow button */
+.skeleton-follow {
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+
+/* NFT Grid Cards */
 .skeleton-img {
   width: 100%;
-  height: 220px;
-  background: #ddd;
+  height: 180px;
   border-radius: 12px;
+  margin-bottom: 10px;
 }
 
-/* Skeleton title */
 .skeleton-title {
-  width: 60%;
-  height: 18px;
-  background: #ddd;
-  border-radius: 6px;
+  width: 70%;
+  height: 16px;
+  margin-bottom: 6px;
 }
 
-/* Skeleton author line */
 .skeleton-author {
   width: 40%;
   height: 14px;
-  background: #ddd;
-  border-radius: 6px;
 }
 
-/* Smooth shimmer animation */
-@keyframes skeleton-loading {
-  0% {
-    background-color: #eeeeee;
-  }
-  50% {
-    background-color: #dddddd;
-  }
-  100% {
-    background-color: #eeeeee;
-  }
-}
-
-/* FOR TOP SELLERS ROW SKELETONS */
-.skeleton-author-row {
-  width: 100%;
-  height: 65px;
-  background: #eee;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  animation: skeleton-loading 1.5s infinite linear;
-.author_list_info a {
-  text-decoration: none !important;
-  color: #000;   /* keep text color same as design */
-  font-weight: 600;
-}
-}
 
 .author_list_info a:hover {
   text-decoration: underline; /* optional */
   color: #8b5cf6; /* light purple hover like the template */
 }
+
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.skeleton-seller {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.skeleton-seller-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e3e3e3;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+.skeleton-seller-text {
+  width: 120px;
+  height: 14px;
+  background: #e3e3e3;
+  border-radius: 4px;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+/* Top Sellers Skeleton Row */
+.skeleton-seller-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  background: transparent !important;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+.skeleton-seller-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e3e3e3;
+}
+
+.skeleton-seller-info {
+  flex: 1;
+}
+
+.skeleton-line {
+  height: 12px;
+  background: #e3e3e3;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.skeleton-line.w-50 {
+  width: 50%;
+}
+
+.skeleton-line.w-25 {
+  width: 25%;
+}
+
+
+/* HOT COLLECTIONS SKELETON */
+.skeleton-collection-img {
+  width: 100%;
+  height: 200px;
+  background: #e3e3e3;
+  border-radius: 12px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.skeleton-collection-author {
+  width: 60px;
+  height: 60px;
+  background: #e3e3e3;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: -30px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.skeleton-collection-title {
+  width: 50%;
+  height: 18px;
+  background: #e3e3e3;
+  margin: 15px auto 5px;
+  border-radius: 6px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.skeleton-collection-code {
+  width: 30%;
+  height: 14px;
+  background: #e3e3e3;
+  margin: 0 auto 15px;
+  border-radius: 6px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+
+
+
+
+
