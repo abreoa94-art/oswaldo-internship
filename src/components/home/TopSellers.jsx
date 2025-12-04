@@ -27,7 +27,7 @@ const TopSellers = () => {
   }, []);
 
   return (
-    <section id="section-popular" className="pb-5">
+    <section data-aos="fade-in" id="section-popular" className="pb-5">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

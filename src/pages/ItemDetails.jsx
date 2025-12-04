@@ -11,7 +11,7 @@ const ItemDetails = () => {
   const API_URL = `https://us-central1-nft-cloud-functions.cloudfunctions.net/itemDetails?nftId=${nftId}`;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    
 
     const fetchItem = async () => {
       try {

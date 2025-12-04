@@ -61,7 +61,7 @@ const settings = {
 }
 
   return (
-    <section id="section-collections" className="no-bottom">
+    <section data-aos="fade-up" id="section-collections" className="no-bottom">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
