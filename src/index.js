@@ -7,7 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 ReactDOM.render(
   <React.StrictMode>
